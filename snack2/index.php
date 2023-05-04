@@ -31,7 +31,7 @@ Con un form passare come parametri GET name, mail e age e verificare (cercando i
       </div>
       <div class="mb-5">
         <label for="email" class="form-label">E-mail</label>
-        <input type="email"
+        <input type="text"
           class="form-control w-50 mx-auto" name="email" id="email" aria-describedby="emailHelper" placeholder="Insert your e-mail">
         <small id="emailHelper" class="form-text text-muted">Insert your e-mail</small>
       </div>
