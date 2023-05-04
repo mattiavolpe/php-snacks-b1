@@ -3,12 +3,9 @@
   $email = $_GET["email"];
   $age = $_GET["age"];
   $nameCondition = strlen($name) > 3;
-  $emailConditionAt = strpos($email, "@");
-  $emailConditionDot = strpos($email, ".");
-  $ageCondition = true;
-  var_dump($nameCondition, $emailConditionAt, $emailConditionDot, $ageCondition);
-  // $emailConditionDot = 
-  // $ageCondition = is_int($age);
+  $emailConditionAt = str_contains($email, "@");
+  $emailConditionDot = str_contains($email, ".");
+  $ageCondition = is_numeric($age);
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +24,11 @@
   
   <body>
     
-    <?php if ($nameCondition && $emailConditionAt != false && $emailConditionDot != false && ageCondition) : ?>
-      <p>Accesso riuscito</p>
-      <?php else : ?>
-      <p>Accesso negato</p>
-      <?php endif; ?>
+    <?php if ($nameCondition && $emailConditionAt && $emailConditionDot && $ageCondition) : ?>
+    <p>Accesso riuscito</p>
+    <?php else : ?>
+    <p>Accesso negato</p>
+    <?php endif; ?>
     
   </body>
   
