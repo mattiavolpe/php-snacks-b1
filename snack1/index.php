@@ -58,7 +58,7 @@ $games = [
   <body>
     
     <?php foreach($games as $game) : ?>
-      <p><?= $game["homeTeam"] . " - " . $game["awayTeam"] . " | " . $game["homeTeamScore"] . " - " . $game["awayTeamScore"]?></p>
+      <p><?= $game['homeTeam'] . ' - ' . $game['awayTeam'] . ' | ' . $game['homeTeamScore'] . ' - ' . $game['awayTeamScore']?></p>
     <?php endforeach; ?>    
     
   </body>
