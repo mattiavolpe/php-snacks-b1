@@ -1,0 +1,71 @@
+<?php
+  
+/*
+Snack 1:
+## Snack 1
+
+Creiamo un array contenente le partite di basket di un’ipotetica tappa del calendario. Ogni array avrà una squadra di casa e una squadra ospite, punti fatti dalla squadra di casa e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con questo schema.
+
+Olimpia Milano - Cantù | 55-60
+*/
+
+$games = [
+  [
+    "homeTeam" => "Banco di Sardegna Sassari",
+    "awayTeam" => "Carpegna Prosciutto Pesaro",
+    "homeTeamScore" => rand(50, 150),
+    "awayTeamScore" => rand(50, 150),
+  ],
+  [
+    "homeTeam" => "Bertram Yachts Derthona Tortona",
+    "awayTeam" => "Dolomiti Energia Trentino",
+    "homeTeamScore" => rand(50, 150),
+    "awayTeamScore" => rand(50, 150),
+  ],
+  [
+    "homeTeam" => "EA7 Emporio Armani Milano",
+    "awayTeam" => "GeVi Napoli Basket",
+    "homeTeamScore" => rand(50, 150),
+    "awayTeamScore" => rand(50, 150),
+  ],
+  [
+    "homeTeam" => "Germani Brescia",
+    "awayTeam" => "Givova Scafati",
+    "homeTeamScore" => rand(50, 150),
+    "awayTeamScore" => rand(50, 150),
+  ],
+  [
+    "homeTeam" => "Happy Casa Brindisi",
+    "awayTeam" => "Openjobmentis Varese",
+    "homeTeamScore" => rand(50, 150),
+    "awayTeamScore" => rand(50, 150),
+  ],
+]
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Basket games</title>
+  </head>
+  
+  <body>
+    
+    <?php
+      foreach($games as $game) :
+        foreach ($game as $value) : ?>
+        <p><?= $value ?></p>
+    <?php
+        endforeach;
+      endforeach;
+    ?>    
+    
+  </body>
+  
+</html>
